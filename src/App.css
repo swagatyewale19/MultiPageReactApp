@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  text-align: left;
+  margin-bottom: 20px;
+  border-bottom: 5px solid gray;
+  padding-bottom: 2%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 26px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.post-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  background-color: black;
   color: white;
+  border: 1px solid gray;
 }
 
-.App-link {
-  color: #61dafb;
+.post-container img {
+  max-width: 80%;
+  height: 80%;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive layout */
+@media (max-width: 1200px) {
+  .post-list {
+    grid-template-columns: repeat(3, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 992px) {
+  .post-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .post-list {
+    grid-template-columns: 1fr;
   }
 }
